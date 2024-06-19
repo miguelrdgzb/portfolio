@@ -1,0 +1,7 @@
+# Entorno virtual
+
+env/
+
+#Base de datos sqlite
+
+*.sqlite3
