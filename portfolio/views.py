@@ -4,8 +4,23 @@ from .models import *
 # Create your views here.
 
 def home(request):
-    profile = Profile.objects.first()  # Obtiene el primer (y único) registro
-    return render(request, 'index.html', {'profile': profile})
+    profile = Profile.objects.first()
+    skill = Skill.objects.all() 
+    projects = Project.objects.all()
+    education = Education.objects.all() 
+    contact = Contact.objects.first()
+    experience = Experience.objects.all()
+    # bio
+    bio = profile.bio.split('.')
+    first_five = bio[:5]
+    bio_excerpt = '.'.join(first_five) 
+    return render(request, 'index.html', {'profile': profile,
+                                          'Skill': skill,
+                                          'projects': projects,
+                                          'education': education,
+                                          'contact': contact,
+                                          'experience': experience,
+                                          'bio_excerpt': bio_excerpt})
 
 def about(request):
     profiles = Profile.objects.all

@@ -1,6 +1,7 @@
 # Entorno virtual
 
 env/
+__pycache__/
 
 #Base de datos sqlite
 

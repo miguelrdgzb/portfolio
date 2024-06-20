@@ -4062,44 +4062,65 @@ td:last-child {
 /* --------------------------------------------------------------------
  * ## clients list
  * -------------------------------------------------------------------- */
-.clients-list {
-	display     : flex;
-	flex-flow   : row wrap;
-	border-color: rgba(0, 0, 0, 0.2);
-	border-style: solid;
-	border-width: 1px 0 0 1px;
-	margin-top  : 0;
+ .clients-list {
+    display: flex;
+    flex-flow: row wrap;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-style: solid;
+    border-width: 1px 0 0 1px;
+    margin-top: 0;
 }
 
 .clients-list__item {
-	flex        : none;
-	width       : 20%;
-	border-color: rgba(0, 0, 0, 0.2);
-	border-width: 1px;
-	text-align  : center;
-	padding     : 0;
+    flex: none;
+    width: 20%;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-width: 1px;
+    text-align: center;
+    padding: 0;
 }
 
 .clients-list__item a {
-	display   : block;
-	padding   : var(--vspace-1) var(--vspace-0_75);
-	transition: all 0.5s ease-in;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    padding: var(--vspace-1) var(--vspace-0_75);
+    transition: all 0.5s ease-in;
 }
 
 .clients-list__item a:focus,
 .clients-list__item a:hover {
-	background-color: var(--color-3-dark);
+    background-color: var(--color-3-dark);
 }
 
 .clients-list__item img {
-	margin        : 0;
-	transform     : scale(0.95);
-	transition    : all 0.5s ease-in;
-	vertical-align: bottom;
+    margin: 0;
+    transform: scale(0.95);
+    transition: all 0.5s ease-in;
+    vertical-align: bottom;
+    max-width: 100%; /* Asegura que la imagen no sea más ancha que el contenedor */
+    max-height: 100%; /* Asegura que la imagen no sea más alta que el contenedor */
 }
 
 .clients-list__item:nth-child(n) {
-	border-style: none solid solid none;
+    border-style: none solid solid none;
+}
+
+.github-link a {
+    display: flex;
+    padding: var(--vspace-1) var(--vspace-0_75);
+    transition: all 0.5s ease-in;
+}
+
+.github-link img {
+	vertical-align: bottom;
+	transform: scale(0.95);
+    display: inline-block; /* Para que el enlace ocupe solo el espacio necesario */
+    transition: all 0.5s ease-in; /* Transición suave para el cambio de color */
+}
+.github-link a:focus,
+.github-link a:hover {
+    background-color: var(--color-3-dark); /* Cambia el color de fondo al pasar el ratón */
 }
 
 /* ------------------------------------------------------------------- 
@@ -4107,42 +4128,44 @@ td:last-child {
  * clients
  * ------------------------------------------------------------------- */
 @media screen and (max-width: 1600px) {
-	.clients-list__item {
-		width: 25%;
-	}
+    .clients-list__item {
+        width: 25%;
+    }
 }
 
 @media screen and (max-width: 1200px) {
-	.s-clients__content-block:first-child .grid-section-split__primary {
-		margin-top: 0;
-	}
+    .s-clients__content-block:first-child .grid-section-split__primary {
+        margin-top: 0;
+    }
 
-	.clients-list__item {
-		width: 33.3333%;
-	}
+    .clients-list__item {
+        width: 33.3333%;
+    }
 }
 
 @media screen and (max-width: 900px) {
-	.clients-list__item {
-		width: 50%;
-	}
+    .clients-list__item {
+        width: 50%;
+    }
 }
 
 @media screen and (max-width: 600px) {
-	.clients-list__item a {
-		padding: var(--vspace-1) var(--vspace-0_25);
-	}
+    .clients-list__item a {
+        padding: var(--vspace-1) var(--vspace-0_25);
+    }
 }
 
 @media screen and (max-width: 460px) {
-	.clients-list__item {
-		width: 100%;
-	}
+    .clients-list__item {
+        width: 100%;
+    }
 
-	.clients-list__item a {
-		padding: var(--vspace-0_75) var(--vspace-0_75);
-	}
+    .clients-list__item a {
+        padding: var(--vspace-0_75) var(--vspace-0_75);
+    }
 }
+
+
 
 
 
