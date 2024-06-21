@@ -23,8 +23,10 @@ def home(request):
                                           'bio_excerpt': bio_excerpt})
 
 def about(request):
-    profiles = Profile.objects.all
-    return render(request, 'about.html')
+    profile = Profile.objects.first()
+    nombreApellidos = profile.first_name + " " + profile.last_name
+    return render(request, 'about.html',{'profile': profile,
+                                         'nombreApellidos': nombreApellidos})
 
 def contact(request):
     contact = Contact.objects.all

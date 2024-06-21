@@ -70,7 +70,7 @@
                         <li><a href="#about">Sobre Mí</a></li>
                         <li><a href="#experience">Experiencia</a></li>
                         <li><a href="{% url 'skill'%}">Tecnologías</a></li>
-                        <li><a href="{% url 'contact'%}">Contacto</a></li>
+                        <li><a href="">Contacto</a></li>
                     </ul> <!-- s-header__menu-links -->
 
                     <div class="s-header__contact">
@@ -254,12 +254,12 @@
 
                     <div class="s-cta__content">
                         <h2 class="text-display-title">
-                        Get started with a consultation today.
+                        Contacto
                         </h2>
                         <p class="lead">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis rem, esse doloribus sint eaque at debitis enim vitae minus expedita ratione dignissimos sit nostrum optio sequi. Ipsa at beatae quam.
+                        ¿Hacemos historia?
                         </p>
-                        <a href="contact.html" class="btn btn--primary">Let's Work Together</a>
+                        <a href="contact.html" class="btn btn--primary">¡Hablemos!</a>
                     </div>
 
                 </div>
@@ -269,7 +269,8 @@
 
         <!-- # journal
         ================================================== -->
-        <section id="journal" class="s-journal">
+        <!--
+         <section id="journal" class="s-journal">
 
             <div class="row s-journal__content width-sixteen-col">
                 <div class="column xl-12 grid-block">
@@ -279,7 +280,7 @@
                         <h2 class="text-display-title">
                         Latest articles from my blog.
                         </h2>  
-                    </div> <!-- end section-header --> 
+                    </div> 
 
                     <div class="grid-full s-journal__content-main grid-list-items">
 
@@ -297,7 +298,7 @@
                                 panel to make managing your websites and projects easy. <a href="https://www.dreamhost.com/r.cgi?287326">Sign up</a> now to get started.
                                 </p>
                             </div>
-                        </div> <!-- end blog-card -->
+                        </div> 
                         <div class="grid-list-items__item blog-card">
                             <div class="blog-card__header">
                                 <div class="blog-card__cat-links">
@@ -312,7 +313,7 @@
                                 magnam. Cumque ducimus laborum doloribus facere maxime vel earum quidem enim suscipit.
                                 </p>
                             </div>
-                        </div> <!-- end blog-card -->
+                        </div> 
                         <div class="grid-list-items__item blog-card">
                             <div class="blog-card__header">
                                 <div class="blog-card__cat-links">
@@ -327,7 +328,7 @@
                                 magnam. Cumque ducimus laborum doloribus facere maxime vel earum quidem enim suscipit.
                                 </p>
                             </div>
-                        </div> <!-- end blog card -->
+                        </div> 
                         <div class="grid-list-items__item blog-card">
                             <div class="blog-card__header">
                                 <div class="blog-card__cat-links">
@@ -342,15 +343,15 @@
                                 dolore necessitatibus id magni rem officia dolor nam sit laudantium. Quo eaque eveniet quibusdam unde. 
                                 </p>
                             </div>
-                        </div> <!-- end blog-card -->
+                        </div> 
 
-                    </div> <!-- end grid-list-items -->
+                    </div> 
 
-                </div> <!-- end grid-block-->
-            </div> <!-- end s-journal__content -->
+                </div> 
+            </div> 
 
-        </section> <!-- end s-journal -->
-
+        </section> 
+    -->
 
         <!-- # footer 
         ================================================== -->
@@ -365,11 +366,9 @@
                 <div class="column xl-3 lg-6 md-12 s-footer__block s-footer__site-links">
                     <h3>Site Links</h3>
                     <ul class="link-list">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="blog.html">Journal</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="{% url 'home'%}">Home</a></li>
+                        <li><a href="{% url 'about'%}">About</a></li>
+                        <li><a href="">Contact</a></li>
                         <li><a href="https://www.dreamhost.com/r.cgi?287326">DreamHost</a></li>
                     </ul>
                 </div>
@@ -422,7 +421,7 @@
                 </div>
                 <div class="column xl-6 lg-12">
                     <p class="ss-copyright">
-                        <span>© Copyright Monica 2022</span> 
+                        <span>© Copyright Miguel 2024</span> 
                         <span>Design by <a href="https://www.styleshout.com/">StyleShout</a> Distribution By <a href="https://themewagon.com">ThemeWagon</a></span>
                     </p>
                 </div>
